@@ -1,0 +1,465 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+    --header-height: 3rem;
+
+    /*========== Colors ==========*/
+    /* Change favorite color */
+    --hue-color: 220;
+    /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+
+    /* HSL color mode */
+    --first-color: hsl(var(--hue-color), 69%, 51%);
+    --first-color-second: hsl(var(--hue-color), 69%, 61%);
+    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 45%);
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+    --container-color: #FFF;
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+    ;
+
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.15rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== Margenes Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+    :root {
+        --big-font-size: 3rem;
+        --h1-font-size: 2.225rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+
+/*==================== BASE ====================*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+
+.section {
+    padding: 6rem 0 5rem;
+
+}
+
+.section-title {
+    font-size: var(--h1-font-size);
+    margin-top: var(--mb-0-75);
+    text-align: center;
+}
+
+
+/*==================== LAYOUT ====================*/
+
+.container {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+    top: 0;
+    bottom: initial;
+
+}
+
+
+/*==================== BUTTONS ====================*/
+
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    font-weight: var(--font-medium);
+    color: #FFFFFF;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.button:hover {
+    background-color: var(--first-color-alt);
+}
+
+.button-icon {
+    font-size: 1.25rem;
+    margin-left: var(--mb-0-5);
+    transition: .3s;
+}
+
+.button-white {
+    background-color: #FFF;
+    color: var(--first-color);
+}
+
+.button-white:hover {
+    background-color: #FFF;
+}
+
+.button-flex {
+    display: inline-flex;
+    align-items: center;
+}
+
+.no-button {
+    border: none;
+}
+
+/*==================== NAV ====================*/
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(var(--header-height) + 1.5rem);
+    column-gap: 1rem;
+}
+
+.nav-logo {
+    font-size: var(--h2-font-size);
+}
+
+.nav-logo,
+.nav-toggle {
+    color: var(--first-color);
+    font-weight: var(--font-medium);
+}
+
+.nav-logo:hover {
+    color: var(--first-color-second);
+}
+
+.nav-toggle {
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.nav-toggle:hover {
+    color: var(--first-color-second);
+}
+
+.nav-link {
+    color: var(--title-color);
+}
+
+.nav-link:hover {
+    color: var(--first-color);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-list {
+    display: flex;
+    column-gap: 2rem;
+}
+
+.nav-menu {
+    margin-left: auto;
+    top:  calc(var(--header-height) + 1.5rem);
+    right: -100%;
+}
+
+/* show menu */
+
+.show-menu {
+    right: 0;
+}
+
+/* Active link */
+
+.active-link {
+    color: var(--first-color);
+}
+
+/* Change background header */
+
+header {
+    box-shadow: 0 -1px 4px rgb(0, 0, 0, .15);
+}
+
+/* Fin plantilla parte 1*/
+/*==================== BANNER ====================*/
+
+.banner {
+    background-color: var(--first-color);
+}
+
+.banner-content {
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+    padding-top: 2.5rem;
+    column-gap: 4rem;
+}
+
+.banner-title {
+    font-size: var(--h1-font-size);
+    color: var(--body-color);
+}
+
+.banner-description {
+    margin-bottom: var(--mb-1);
+    font-size: var(--small-font-size);
+    color: var(--body-color);
+}
+
+/*==================== Servicios ====================*/
+.servicios-content {
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding-top: 2.5rem;
+    column-gap: 2.5rem;
+}
+
+.servicios-content-servicio {
+    text-align: center;
+}
+
+.servicio-icono {
+    width: 64px;
+
+}
+
+.servicio-title {
+    padding: var(--mb-0-5) 0 var(--mb-0-5);
+}
+
+/*==================== Nosotros ====================*/
+
+.nosotros {
+    background-color: var(--first-color);
+}
+
+.nosotros-content {
+
+    text-align: center;
+    color: var(--body-color);
+}
+
+.nosotros-content>h2 {
+    color: var(--body-color);
+}
+
+/*==================== Proyectos ====================*/
+
+.proyectos-content {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    padding-top: 2.5rem;
+    column-gap: 1.5rem;
+
+}
+
+.proyectos-content-proyecto {
+    text-align: center;
+}
+
+.proyecto-title {
+    padding: 0 0 var(--mb-0-5);
+}
+
+/*==================== Trabaja ====================*/
+.trabaja-content {
+    text-align: center;
+
+}
+
+.trabaja-socials>a {
+    margin-right: var(--mb-1-5);
+}
+
+/*==================== Footer ====================*/
+footer {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+/* Comienzo plantilla parte 2*/
+
+/*==================== MEDIA QUERIES ====================*/
+/* For small devices */
+@media screen and (max-width: 768px) {
+    .container {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
+}
+
+@media screen and (max-width: 668px) {
+
+    .nav-menu {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        background-color: var(--body-color);
+        padding: 0 1rem 1rem;
+        transition: .3s;     
+    }
+
+    .nav-list {
+        display: block;
+    }
+
+    .nav-link {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-size: var(--small-font-size);
+        font-weight: var(--font-medium);
+        padding-top: var(--mb-1);
+        padding-bottom: var(--mb-1);
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+
+}
+
+@media screen and (max-width: 568px) {
+
+    .section {
+        padding: 3rem 0 2rem;
+
+    }
+
+
+    .banner-content {
+        grid-template-columns: 1fr;
+
+    }
+
+    .banner-content>div {
+        text-align: center;
+    }
+
+    .banner-img {
+        width: 300px;
+    }
+
+    .servicios-content {
+        grid-template-columns: 1fr;
+    }
+
+    .proyectos-content {
+        grid-template-columns: 1fr;
+    }
+
+    .proyectos-content-proyecto>div {
+        padding-bottom: var(--mb-1);
+    }
+
+    .proyectos-content-proyecto>div>img {
+        width: 300px;
+    }
+}
+
+/*========== SCROLL BAR ==========*/
+::-webkit-scrollbar {
+    width: .60rem;
+    background-color: var(--scroll-bar-color);
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-color-light);
+}
