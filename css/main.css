@@ -281,7 +281,7 @@ header {
 .banner-content {
     grid-template-columns: 2fr 2fr;
     align-items: center;
-    padding-top: 2.5rem;
+    
     column-gap: 4rem;
 }
 
@@ -413,7 +413,7 @@ footer {
 @media screen and (max-width: 568px) {
 
     .section {
-        padding: 3rem 0 2rem;
+        padding: 5rem 0 2rem;
 
     }
 
