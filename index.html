@@ -26,8 +26,9 @@
                     </ul>
                 </nav>
                 <div class="nav-btns">
+                    <i class="fas fa-moon change-theme" id="theme-button"></i>
                     <div class="nav-toggle" id="nav-toggle">
-                        Menu <img src="assets/icons/menu.svg" alt="Show menu">
+                        <i class="fas fa-bars"></i>
                     </div>
                 </div>
             </div>
@@ -57,17 +58,17 @@
                     <h2 class="section-title">Nuestros Servicios</h2>
                     <div class="servicios-content grid">
                         <article class="servicios-content-servicio">
-                            <img class="servicio-icono" src="assets/icons/phone.svg" alt="Icono servicio 1">
+                            <i class="fas fa-phone servicio-icono"></i>
                             <h3 class="servicio-title">Servicio 1</h3>
                             <p>Texto explicativo referente al servicio 1</p>
                         </article>
                         <article class="servicios-content-servicio">
-                            <img class="servicio-icono" src="assets/icons/computer.svg" alt="Icono servicio 2">
+                            <i class="fas fa-desktop servicio-icono"></i>
                             <h3 class="servicio-title">Servicio 2</h3>
                             <p>Texto explicativo referente al servicio 2</p>
                         </article>
                         <article class="servicios-content-servicio">
-                            <img class="servicio-icono" src="assets/icons/keyboard.svg" alt="Icono servicio 3">
+                            <i class="fas fa-keyboard servicio-icono"></i>
                             <h3 class="servicio-title">Servicio 3</h3>
                             <p>Texto explicativo referente al servicio 3</p>
                         </article>
@@ -128,23 +129,27 @@
                     <h2 class="section-title">¿Quieres trabajar con nosotros?</h2>
                     <p>Es el momento de convertir tu idea en algo real. Puedes contactarnos en nuestro correo
                         electronico.</p>
-                        <div>
-                    <a class="button" href="mailto:contacto@easycode.com">contacto@easycode.com</a>
-                        </div>
+                    <div>
+                        <a class="button" href="mailto:contacto@easycode.com">contacto@easycode.com</a>
+                    </div>
                     <div class="trabaja-socials">
-                        <a href="#" target="_blank"><img src="assets/icons/facebook.svg" alt="Icono facebook"></a>
-                        <a href="#" target="_blank"><img src="assets/icons/twitter.svg" alt="Icono twitter"></a>
-                        <a href="#" target="_blank"><img src="assets/icons/whatsapp.svg" alt="Icono whatsapp"></a>
-                        <a href="#" target="_blank"><img src="assets/icons/instagram.svg" alt="Icono instagram"></a>
+                        <a href="#" target="_blank"> <i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"> <i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"> <i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"> <i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </section>
         </main>
         <!--Footer-->
         <footer class="footer">
-            <p>Todos los derechos reservados   &#169; <span id="fecha"></span>  | Easy Code Tech.</p>
+            <p>Todos los derechos reservados &#169; <span id="fecha"></span> | Easy Code Tech.</p>
         </footer>
+        <!--Logica principal -->
         <script src="js/main.js"></script>
+
+        <!--Libreria de iconos FontAwesome-->
+        <script src="js/fontawesome.js" crossorigin="anonymous"></script>
     </body>
 
 </html>

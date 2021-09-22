@@ -17,6 +17,7 @@
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
     --title-color: hsl(var(--hue-color), 8%, 15%);
     --text-color: hsl(var(--hue-color), 8%, 45%);
+    --text-dark: hsl(var(--hue-color), 8%, 95%);
     --text-color-light: hsl(var(--hue-color), 8%, 65%);
     --input-color: hsl(var(--hue-color), 70%, 96%);
     --body-color: hsl(var(--hue-color), 60%, 99%);
@@ -119,6 +120,44 @@ img {
 textarea {
     resize: vertical;
 }
+
+.fas, .fab{
+    font-size: 1.25rem;
+    color: var(--title-color);
+}
+
+
+/*========== Variables Dark theme ==========*/
+
+body.dark-theme {
+    --title-color: hsl(var(--hue-color), 8%, 95%);
+    --text-color: hsl(var(--hue-color), 8%, 75%);
+    --input-color: hsl(var(--hue-color), 29%, 16%);
+    --body-color: hsl(var(--hue-color), 20%, 12%);
+    --container-color: hsl(var(--hue-color), 29%, 16%);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 46%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+}
+
+/*========== Button Dark/Light ==========*/
+
+.nav-btns {
+    display: flex;
+    align-items: center;
+}
+
+.change-theme {
+  
+    color: var(--title-color);
+    margin-right: var(--mb-1);
+    cursor: pointer;
+}
+
+.change-theme:hover {
+    color: var(--first-color);
+}
+
+
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 
@@ -229,8 +268,9 @@ textarea {
 }
 
 .nav-toggle {
-    font-size: 1.1rem;
+   
     cursor: pointer;
+    margin-left: var(--mb-1);
 }
 
 .nav-toggle:hover {
@@ -274,6 +314,10 @@ textarea {
 
 /* Change background header */
 
+.change-theme {
+    margin: 0;
+}
+
 header {
     box-shadow: 0 -1px 4px rgb(0, 0, 0, .15);
 }
@@ -294,13 +338,13 @@ header {
 
 .banner-title {
     font-size: var(--h1-font-size);
-    color: var(--body-color);
+    color: var(--text-dark);
 }
 
 .banner-description {
     margin-bottom: var(--mb-1);
     font-size: var(--small-font-size);
-    color: var(--body-color);
+    color: var(--text-dark);
 }
 
 /*==================== Servicios ====================*/
@@ -316,8 +360,10 @@ header {
 }
 
 .servicio-icono {
-    width: 64px;
 
+ font-size: 64px;
+ color: var(--first-color);
+  
 }
 
 .servicio-title {
@@ -333,11 +379,11 @@ header {
 .nosotros-content {
 
     text-align: center;
-    color: var(--body-color);
+    color: var(--text-dark)
 }
 
 .nosotros-content>h2 {
-    color: var(--body-color);
+    color: var(--text-dark)
 }
 
 /*==================== Proyectos ====================*/
@@ -374,7 +420,7 @@ footer {
     padding-top: 1rem;
     text-align: center;
     background-color: var(--first-color);
-    color: var(--body-color);
+    color: var(--text-dark);
 }
 
 /* Pagina  de contacto*/
