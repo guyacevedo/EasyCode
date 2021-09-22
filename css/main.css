@@ -368,6 +368,51 @@ footer {
     text-align: center;
 }
 
+
+
+/* Pagina  de contacto*/
+
+.contact-data {
+    padding-top: var(--mb-1-5);
+    grid-template-columns: 2fr 1.5fr;
+    column-gap: 0;
+}
+
+.contact-data-title {
+    padding-top: var(--mb-0-5);
+}
+
+.mapa {
+    padding-top: var(--mb-0-5);
+}
+
+.form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Pagina quienes somos */
+
+.nosotros-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    padding-top: var(--mb-1-5);
+}
+
+.nosotros-main-img>img {
+    border-radius: var(--mb-0-5);
+}
+
+.nosotros-main-data>h3 {
+    padding-bottom: var(--mb-0-5);
+}
+
+.nosotros-main-data {
+    padding: var(--mb-2);
+    text-align: center;
+}
+
 /* Comienzo plantilla parte 2*/
 
 /*==================== MEDIA QUERIES ====================*/
@@ -379,10 +424,12 @@ footer {
     }
 
     .contact-data {
-        display: block;
-     
+        grid-template-columns: 1fr;
+
     }
+
 }
+
 
 @media screen and (max-width: 668px) {
 
@@ -411,6 +458,17 @@ footer {
 
     .nav-toggle {
         display: block;
+    }
+
+
+
+    .nosotros-main {
+        grid-template-columns: 1fr;
+        padding-top: 0;
+    }
+
+    .nosotros-main-img {
+        display: none;
     }
 
 
@@ -452,6 +510,7 @@ footer {
     .proyectos-content-proyecto>div>img {
         width: 300px;
     }
+
 }
 
 /*========== SCROLL BAR ==========*/
@@ -468,25 +527,4 @@ footer {
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--text-color-light);
-}
-
-/* Pagina  de contacto*/
-
-.contact-data {
-    padding-top: 2rem;
-    grid-template-columns: 2fr 1.5fr;
-    column-gap: 0;
-}
-
-.contact-data-title {
-    padding-top: var(--mb-0-5);
-}
-
-.mapa {
-    padding-top: var(--mb-0-5);
-}
-
-.form{
-    margin: 0;
-    padding: 0;
 }
