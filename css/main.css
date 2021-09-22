@@ -418,7 +418,7 @@ footer {
 .proyectos-main {
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding-top: 2.5rem;
+    padding-top: var(--mb-1-5);
     column-gap: 1.5rem;
 
 }
@@ -454,8 +454,6 @@ footer {
         grid-template-columns: 1fr;
 
     }
-
-
 
 }
 
