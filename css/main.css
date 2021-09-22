@@ -13,7 +13,7 @@
     /* HSL color mode */
     --first-color: hsl(var(--hue-color), 69%, 51%);
     --first-color-second: hsl(var(--hue-color), 69%, 61%);
-    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color-alt: hsl(var(--hue-color), 59%, 55%);
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
     --title-color: hsl(var(--hue-color), 8%, 15%);
     --text-color: hsl(var(--hue-color), 8%, 45%);
@@ -123,14 +123,19 @@ textarea {
 /*==================== REUSABLE CSS CLASSES ====================*/
 
 .section {
-    padding: 6rem 0 5rem;
+    padding: var(--mb-2) 0 var(--mb-2);
 
 
 }
 
+
+.first-section {
+    padding: 6rem 0 var(--mb-2);
+}
+
 .section-title {
     font-size: var(--h1-font-size);
-    margin-top: var(--mb-0-75);
+    margin-top: var(--mb-0-25);
     text-align: center;
 }
 
@@ -145,7 +150,7 @@ textarea {
 
 .grid {
     display: grid;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .header {
@@ -278,6 +283,7 @@ header {
 
 .banner {
     background-color: var(--first-color);
+
 }
 
 .banner-content {
@@ -375,7 +381,7 @@ footer {
 
 .contact-data {
     padding-top: var(--mb-1-5);
-    grid-template-columns: 2fr 1.5fr;
+    grid-template-columns: 2fr 1.6fr;
     column-gap: 0;
 }
 
@@ -503,12 +509,7 @@ footer {
 
 @media screen and (max-width: 568px) {
 
-    .section {
-        padding: 5rem 0 2rem;
-
-    }
-
-
+   
     .banner-content {
         grid-template-columns: 1fr;
 
