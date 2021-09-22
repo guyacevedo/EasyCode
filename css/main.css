@@ -364,11 +364,12 @@ header {
 
 /*==================== Footer ====================*/
 footer {
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
     text-align: center;
+    background-color: var(--first-color);
+    color: var(--body-color);
 }
-
-
 
 /* Pagina  de contacto*/
 
@@ -413,6 +414,32 @@ footer {
     text-align: center;
 }
 
+/* Pagina proyectos */
+.proyectos-main {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-top: 2.5rem;
+    column-gap: 1.5rem;
+
+}
+
+.proyectos-main-proyecto>img {
+    border-radius: var(--mb-0-5);
+}
+
+.proyectos-main-proyecto>h4 {
+    padding-top: var(--mb-0-5);
+}
+
+.proyectos-main-proyecto>p {
+    padding-top: var(--mb-0-5);
+}
+
+.proyectos-main-proyecto>a {
+    margin-top: var(--mb-0-5);
+}
+
+
 /* Comienzo plantilla parte 2*/
 
 /*==================== MEDIA QUERIES ====================*/
@@ -427,6 +454,8 @@ footer {
         grid-template-columns: 1fr;
 
     }
+
+
 
 }
 
@@ -509,6 +538,11 @@ footer {
 
     .proyectos-content-proyecto>div>img {
         width: 300px;
+    }
+
+    .proyectos-main {
+        grid-template-columns: 1fr;
+
     }
 
 }
